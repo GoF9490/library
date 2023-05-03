@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/members")
 public class MemberController {
 
-    private static MemberService memberService;
+    private final MemberService memberService;
 
     public ResponseEntity createMember(@RequestBody MemberCreate memberCreate) {
         memberService.createMember(memberCreate);
